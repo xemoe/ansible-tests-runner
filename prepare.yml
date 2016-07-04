@@ -1,0 +1,7 @@
+---
+- hosts: test
+  gather_facts: no
+  become: yes
+  pre_tasks:
+    - name: Install Python 2 first
+      raw: python --version || apt-get update && apt-get install -y python

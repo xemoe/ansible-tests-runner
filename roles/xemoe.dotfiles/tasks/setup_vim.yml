@@ -1,0 +1,40 @@
+---
+- name: dotfiles - setup_vim | Make directory for vundle
+  file:
+    path: "~/.vim/bundle"
+    state: directory
+    mode: 0755
+  become: no
+
+- name: dotfiles - setup_vim | Install Vundle
+  git:
+    repo: "{{ dotfiles_vundle_repo }}"
+    dest: "{{ dotfiles_vundle_dir }}"
+    update: yes
+    accept_hostkey: yes
+  become: no
+
+- name: dotfiles - setup_vim | Install dotfiles
+  git:
+    repo: "{{ dotfiles_vimrc_repo }}"
+    dest: "{{ dotfiles_vimrc_dir }}"
+    update: yes
+    accept_hostkey: yes
+  become: no
+
+- name: dotfiles - setup_vim | Update vimrc
+  template: 
+    src: "vimrc.j2"
+    dest: "~/.vimrc"
+  become: no
+
+- name: dotfiles - setup_vim | Update plugins
+  shell: "vim +PluginInstall +qall"
+  become: no
+
+- name: dotfiles - setup_vim | Make vimproc
+  shell: "make"
+  args:
+    chdir: "~/.vim/bundle/vimproc.vim"
+  become: no
+

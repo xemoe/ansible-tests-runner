@@ -1,0 +1,8 @@
+---
+- name: test-xemoe.server_preparations
+  hosts: test
+  gather_facts: yes
+  become: yes
+  roles:
+    - role: xemoe.server_preparations
+      tags: ["test-xemoe.server_preparations"]

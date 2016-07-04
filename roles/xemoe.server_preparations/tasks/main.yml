@@ -1,0 +1,43 @@
+---
+- name: preparations | Update apt-get cache
+  apt: 
+    update_cache: yes
+
+- name: preparations | Install base packages
+  apt: 
+    pkg: "{{ item }}"
+    state: present
+  with_items: "{{ preparations_base_packages }}"
+
+- name: preparations | Install extra packages
+  apt:
+    pkg: "{{ item }}"
+    state: present
+  with_items: "{{ preparations_extra_packages }}"
+
+- name: preparations | Change apt-get mirror site
+  replace:
+    dest: "/etc/apt/sources.list"
+    regexp: 'http://(.*?)archive.ubuntu.com'
+    replace: "{{ preparations_apt_mirror }}"
+    backup: yes
+  when: preparations_apt_mirror is defined
+
+- name: preparations | Configure system timezone
+  file:
+    src: "/usr/share/zoneinfo/{{ preparations_timezone }}"
+    dest: "/etc/localtime"
+    state: link
+    force: yes
+    backup: yes
+
+- name: preparations | Configure ntp server
+  lineinfile:
+    dest: "/etc/ntp.conf"
+    state: present
+    regexp: '^server'
+    line: 'server {{ preparations_ntp_server }}'
+  notify: preparations - notify | Restart ntp service
+
+- name: preparations | Setup language pack
+  shell: "locale-gen {{ preparations_locale }}"

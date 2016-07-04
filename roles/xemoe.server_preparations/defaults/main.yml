@@ -1,0 +1,31 @@
+---
+preparations_base_packages:
+  - curl
+  - wget
+  - python-software-properties
+  - git
+  - zsh
+  - tmux
+  - vim
+  - vim-nox
+  - gcc
+  - make
+  - build-essential
+  - openssh-server
+  - realpath
+  - python-dev
+  - ntp
+
+preparations_extra_packages: 
+  - htop
+  - iotop
+  - fail2ban
+  - supervisor
+  - imagemagick
+  - libnotify-bin
+
+preparations_apt_mirror: "http://mirror.psu.ac.th"
+preparations_timezone: "Asia/Bangkok"
+preparations_ntp_server: "0.th.pool.ntp.org"
+preparations_locale: "en_US en_US.UTF-8 th_TH th_TH.UTF-8"
+

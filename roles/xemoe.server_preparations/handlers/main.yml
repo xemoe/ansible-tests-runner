@@ -1,0 +1,5 @@
+---
+- name: preparations - notify | Restart ntp service
+  service: 
+    name: ntp
+    state: restarted

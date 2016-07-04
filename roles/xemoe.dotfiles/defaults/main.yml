@@ -1,0 +1,15 @@
+---
+dotfiles_base_packages:
+  - zsh
+  - tmux
+  - vim
+  - vim-nox
+
+dotfiles_vimrc_repo: https://xemoe@bitbucket.org/xemoe/vimrc.git
+dotfiles_vimrc_dir: ~/dotfiles
+dotfiles_vundle_repo: https://github.com/gmarik/Vundle.vim.git
+dotfiles_vundle_dir: ~/.vim/bundle/Vundle.vim
+dotfiles_tmux_repo: https://gist.github.com/393b1e57c7ade9d1de2a.git
+dotfiles_tmux_dir: ~/tmuxconf
+dotfiles_zsh_repo: https://github.com/robbyrussell/oh-my-zsh.git
+dotfiles_zsh_dir: ~/.oh-my-zsh

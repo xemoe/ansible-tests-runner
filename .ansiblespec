@@ -1,0 +1,4 @@
+---
+-
+  playbook: sites.yml
+  inventory: inventories/test

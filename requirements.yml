@@ -1,0 +1,13 @@
+---
+- src: https://github.com/xemoe/ansible-server_preparations
+  name: xemoe.server_preparations
+  path: ./roles
+
+- src: https://github.com/xemoe/ansible-dotfiles
+  name: xemoe.dotfiles
+  path: ./roles
+
+- src: https://github.com/xemoe/ansible-webpack
+  name: xemoe.webpack
+  path: ./roles
+

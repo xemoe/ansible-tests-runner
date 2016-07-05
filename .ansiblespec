@@ -1,4 +1,4 @@
 ---
 -
   playbook: sites.yml
-  inventory: inventories/test
+  inventory: inventories/vagrant

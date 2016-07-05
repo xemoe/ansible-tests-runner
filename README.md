@@ -4,12 +4,6 @@ Ansible with AnsibleSpec
 
 ServerSpec is a test framework based on Ruby.
 
-**NOTICE**  
-If you want to use these specfiles on other project,  
-Please install `ansible_spec` ruby-gem to parse Ansible playbook & inventory files.
-- [Rubygems - ansible_spec](http://rubygems.org/gems/ansible_spec)
-- [Github - ansible_spec](https://github.com/volanja/ansible_spec)
-
 # Environment
 
 ```

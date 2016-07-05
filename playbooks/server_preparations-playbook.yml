@@ -1,6 +1,6 @@
 ---
 - name: test-xemoe.server_preparations
-  hosts: test
+  hosts: vagrant
   gather_facts: yes
   become: yes
   roles:

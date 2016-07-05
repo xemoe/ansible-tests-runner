@@ -1,4 +1,0 @@
----
-- include: pre_install.yml
-- include: post_mysql.yml
-- include: post_php.yml

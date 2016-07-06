@@ -1,4 +1,3 @@
 ---
--
-  playbook: test_suite-playbook.yml
-  inventory: inventories/vagrant
+- playbook: site.yml
+  inventory: hosts

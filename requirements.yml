@@ -11,3 +11,7 @@
   name: xemoe.webpack
   path: ./roles
 
+- src: https://github.com/xemoe/ansible-apt-cacher-ng-client
+  name: xemoe.apt-cacher-ng-client
+  path: ./roles
+

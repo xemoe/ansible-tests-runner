@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ansible-playbook -i inventories/vagrant test_suite-playbook.yml
+ansible-playbook -i hosts site.yml
 rake all

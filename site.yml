@@ -1,0 +1,15 @@
+---
+- name: xemoe.server_preparations
+  hosts: mainbox
+  gather_facts: yes
+  become: yes
+  vars:
+    apt_proxy: 192.168.1.155:3142
+  roles:
+    - role: xemoe.apt-cacher-ng-client
+
+    - role: xemoe.server_preparations
+    - role: test-xemoe.server_preparations
+
+    - role: xemoe.dotfiles
+    - role: test-xemoe.dotfiles

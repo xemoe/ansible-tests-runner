@@ -34,7 +34,7 @@ namespace :serverspec do
           deps = AnsibleSpec.load_dependencies(role)
           roles += deps
         end
-        t.pattern = 'test-roles/{' + roles.join(',') + '}/spec/*_spec.rb'
+        t.pattern = 'tests/{' + roles.join(',') + '}/spec/*_spec.rb'
       end
     end
   end

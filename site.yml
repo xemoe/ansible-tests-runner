@@ -9,3 +9,8 @@
     - role: xemoe.apt-cacher-ng-client
     - role: xemoe.server_preparations
     - role: xemoe.dotfiles
+    - role: xemoe.mount_sshfs
+
+    - role: 00-xemoe.server_preparations
+    - role: 10-xemoe.dotfiles
+    - role: 20-xemoe.mount_sshfs

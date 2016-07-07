@@ -1,0 +1,20 @@
+---
+- name: Playbook | setup apt-cacher-ng-client
+  hosts: mainbox
+  gather_facts: yes
+  become: yes
+  vars:
+    apt_proxy: 192.168.1.155:3142
+  roles:
+    - role: xemoe.apt-cacher-ng-client
+
+- name: Playbook | xemoe ansible
+  hosts: mainbox
+  gather_facts: yes
+  become: yes
+  roles:
+    - role: xemoe.server_preparations
+    - role: xemoe.dotfiles
+    - role: xemoe.mount_sshfs
+    - role: xemoe.ssh_config
+

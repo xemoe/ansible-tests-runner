@@ -1,0 +1,15 @@
+---
+- name: ssh_config | Testing ssh_config role
+  hosts: mainbox
+  vars:
+    ssh_config_hosts:
+      - name: mainbox
+        hostname: 172.100.0.200
+        username: vagrant
+        port: 22
+        identity: id_rsa
+        active: true
+  roles:
+    - role: xemoe.ssh_config
+    - role: 30-xemoe.ssh_config
+

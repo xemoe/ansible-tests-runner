@@ -1,27 +1,22 @@
 ---
-- name: setup apt-cacher-ng-client
-  hosts: mainbox
-  gather_facts: yes
-  become: yes
-  vars:
-    apt_proxy: 192.168.1.155:3142
-  roles:
-    - role: xemoe.apt-cacher-ng-client
-
-- name: xemoe ansible
-  hosts: mainbox
-  gather_facts: yes
-  become: yes
-  roles:
-    - role: xemoe.server_preparations
-    - role: xemoe.dotfiles
-    - role: xemoe.mount_sshfs
-
-- name: xemoe ansible testing
+- name: serverspec | server_preparations
   hosts: mainbox
   gather_facts: yes
   become: yes
   roles:
     - role: 00-xemoe.server_preparations
+
+- name: serverspec | dotfiles
+  hosts: mainbox
+  gather_facts: yes
+  become: yes
+  roles:
     - role: 10-xemoe.dotfiles
+
+- name: serverspec | mount_sshfs
+  hosts: mainbox
+  gather_facts: yes
+  become: yes
+  roles:
     - role: 20-xemoe.mount_sshfs
+

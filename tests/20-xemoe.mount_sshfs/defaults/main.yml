@@ -1,8 +1,0 @@
-mount_base_directory: /mnt/sshfs
-mount_network_fs:
-  - mount_type: sshfs
-    mount_directory: me
-    mount_nfs_hostname: "192.168.1.155"
-    mount_nfs_directory: "/var/log"
-    mount_options: []
-    active: true

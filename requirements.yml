@@ -15,3 +15,7 @@
   name: xemoe.apt-cacher-ng-client
   path: ./roles
 
+- src: https://github.com/xemoe/ansible-ssh_config
+  name: xemoe.ssh_config
+  path: ./roles
+

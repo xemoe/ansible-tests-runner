@@ -11,6 +11,7 @@
         port: 22
         username: vagrant
         identity: id_rsa
+        sshpass: vagrant
         active: true
       h02:
         name: secondbox

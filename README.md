@@ -31,13 +31,6 @@ Vagrant 1.7.4
 2. ใช้สคริป `update_roles.sh` เพื่ออัพเดท ansible roles
 3. ใช้สคริป `prepare.sh` เพื่อติดตั้ง python package ลงบน vagrant hosts
 4. เพิ่ม [ServerSpec](http://serverspec.org/resource_types.html) ใน ansible roles ที่ต้องการทดสอบ [main_spec.rb](https://github.com/xemoe/ansible-server_preparations/blob/master/spec/main_spec.rb)
-5. ทำการ execute `ansible-playbook -i inventories/vagrant test_suite-playbook.yml` ลงใน vagrant host
-6. ทดสอบผ่าน `rake all` 
+5. ทำการ execute `ansible-playbook -i hosts playbooks/play.yml` ลงใน vagrant host
+6. ทดสอบผ่าน `PLAYBOOK=site.yml rake all` 
 
----
-
-### กำหนด apt proxy
-
-```sh
-ansible-playbook -i inventories/vagrant --extra-vars="apt_proxy=192.168.1.155:3142" ./playbooks/setup-apt_cacher_client.yml
-```

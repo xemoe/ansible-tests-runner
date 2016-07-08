@@ -1,7 +1,7 @@
 ---
 ssh_config_debug: true
 ssh_config_hosts:
-  h01:
+  mainbox:
     name: mainbox
     hostname: 172.100.0.200
     port: 22
@@ -9,7 +9,7 @@ ssh_config_hosts:
     identity: id_rsa
     sshpass: vagrant
     active: true
-  h02:
+  secondbox:
     name: secondbox
     hostname: 172.100.0.201
     port: 22

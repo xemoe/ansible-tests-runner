@@ -13,10 +13,3 @@
   roles:
     - role: 10-xemoe.dotfiles
 
-- name: serverspec | mount_sshfs
-  hosts: mainbox
-  gather_facts: yes
-  become: yes
-  roles:
-    - role: 20-xemoe.mount_sshfs
-

@@ -1,10 +1,9 @@
 ---
-# - include: tests/20-xemoe.mount_sshfs/test/main.yml
-#  tags: 
-#    - "test-mount_sshfs"
-#  when: false
-
 - include: tests/30-xemoe.ssh_config/test/main.yml
   tags: 
    - "test-ssh_config"
+
+- include: tests/20-xemoe.mount_sshfs/test/main.yml
+  tags: 
+    - "test-mount_sshfs"
 

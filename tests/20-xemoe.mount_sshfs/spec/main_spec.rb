@@ -7,3 +7,19 @@ describe "System spec" do
         end
     end
 end
+
+mounted_directory = '/mnt/sshfs/mainbox/logs'
+syslog_file = "#{mounted_directory}/syslog"
+
+describe "Tasks spec" do
+    describe "Given directory should be mounted directory" do
+        describe file("#{mounted_directory}") do
+              it { should be_mounted }
+        end
+    end
+    describe "Syslog file from mounted directory should be exist" do
+        describe file("#{syslog_file}") do
+              it { should be_file }
+        end
+    end
+end

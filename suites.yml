@@ -1,9 +1,13 @@
 ---
-- include: tests/30-xemoe.ssh_config/test/main.yml
+- include: tests/20-xemoe.ssh_config/test/main.yml
   tags: 
    - "test-ssh_config"
 
-- include: tests/20-xemoe.mount_sshfs/test/main.yml
+- include: tests/30-xemoe.mount_sshfs/test/main.yml
   tags: 
     - "test-mount_sshfs"
+
+- include: tests/40-xemoe.logstash_configurations/test/main.yml
+  tags: 
+    - "test-logstash_configurations"
 

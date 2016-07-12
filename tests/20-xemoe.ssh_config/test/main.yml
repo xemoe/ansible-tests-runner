@@ -6,5 +6,5 @@
     - ssh_config.yml
   roles:
     - role: xemoe.ssh_config
-    - role: 30-xemoe.ssh_config
+    - role: 20-xemoe.ssh_config
 

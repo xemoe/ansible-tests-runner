@@ -7,5 +7,5 @@
     - sshfs_mainbox.yml
   roles:
     - role: xemoe.mount_sshfs
-    - role: 20-xemoe.mount_sshfs
+    - role: 30-xemoe.mount_sshfs
 

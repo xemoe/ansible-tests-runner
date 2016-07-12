@@ -3,7 +3,8 @@
   hosts: mainbox
   become: yes
   vars_files:
-    - syslog_alerts.yml
+    - example_alerts.yml
+    - logstash_syslog.yml
   roles:
     - role: xemoe.logstash_configurations
     - role: 40-xemoe.logstash_configurations

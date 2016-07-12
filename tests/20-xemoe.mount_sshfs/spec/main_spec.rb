@@ -10,6 +10,7 @@ end
 
 mounted_directory = '/mnt/sshfs/mainbox/logs'
 syslog_file = "#{mounted_directory}/syslog"
+supervisor_program = 'supervisor_sshfs_mainbox'
 
 describe "Tasks spec" do
     describe "Given directory should be mounted directory" do
@@ -21,5 +22,8 @@ describe "Tasks spec" do
         describe file("#{syslog_file}") do
               it { should be_file }
         end
+    end
+    describe service("#{supervisor_program}") do
+          it { should be_running.under('supervisor') }
     end
 end

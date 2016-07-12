@@ -1,15 +1,34 @@
 ---
-- name: serverspec | server_preparations
+- name: setup apt-cacher-ng client
   hosts: mainbox
   gather_facts: yes
   become: yes
+  vars:
+    apt_proxy: 192.168.1.155:3142
   roles:
-    - role: 00-xemoe.server_preparations
+    - role: xemoe.apt-cacher-ng-client
 
-- name: serverspec | dotfiles
-  hosts: mainbox
-  gather_facts: yes
-  become: yes
-  roles:
-    - role: 10-xemoe.dotfiles
+- include: roles/xemoe.server_preparations/test/main.yml
+  tags: 
+   - "test-server_preparations"
+
+- include: roles/xemoe.dotfiles/test/main.yml
+  tags: 
+   - "test-dotfiles"
+
+- include: roles/xemoe.webpack/test/main.yml
+  tags: 
+   - "test-webpack"
+
+- include: roles/xemoe.ssh_config/test/main.yml
+  tags: 
+   - "test-ssh_config"
+
+- include: roles/xemoe.mount_sshfs/test/main.yml
+  tags: 
+    - "test-mount_sshfs"
+
+- include: roles/xemoe.logstash_configurations/test/main.yml
+  tags: 
+    - "test-logstash_configurations"
 

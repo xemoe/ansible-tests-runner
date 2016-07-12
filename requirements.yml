@@ -1,21 +1,19 @@
 ---
-- src: https://github.com/xemoe/ansible-server_preparations
-  name: xemoe.server_preparations
+- src: JasonGiedymin.nodejs
   path: ./roles
 
-- src: https://github.com/xemoe/ansible-dotfiles
-  name: xemoe.dotfiles
+- src: bobbyrenwick.pip
   path: ./roles
 
-- src: https://github.com/xemoe/ansible-webpack
-  name: xemoe.webpack
+- src: ansiblebit.launchpad-ppa-webupd8
   path: ./roles
 
-- src: https://github.com/xemoe/ansible-apt-cacher-ng-client
-  name: xemoe.apt-cacher-ng-client
+- src: ansiblebit.oracle-java
   path: ./roles
 
-- src: https://github.com/xemoe/ansible-ssh_config
-  name: xemoe.ssh_config
+- src: geerlingguy.ruby
+  path: ./roles
+
+- src: angstwad.docker_ubuntu
   path: ./roles
 

@@ -31,8 +31,10 @@
 - include: roles/xemoe.logstash_configurations/test/test-syslog.yml
   tags: 
     - "test-logstash_configurations"
+    - "test-logstash_configurations-syslog"
 
 - include: roles/xemoe.logstash_configurations/test/test-files_forward.yml
   tags: 
     - "test-logstash_configurations"
+    - "test-logstash_configurations-files_forward"
 

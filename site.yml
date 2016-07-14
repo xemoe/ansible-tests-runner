@@ -28,7 +28,11 @@
   tags: 
     - "test-mount_sshfs"
 
-- include: roles/xemoe.logstash_configurations/test/main.yml
+- include: roles/xemoe.logstash_configurations/test/test-syslog.yml
+  tags: 
+    - "test-logstash_configurations"
+
+- include: roles/xemoe.logstash_configurations/test/test-files_forward.yml
   tags: 
     - "test-logstash_configurations"
 

@@ -10,23 +10,31 @@
 
 - include: roles/xemoe.server_preparations/test/main.yml
   tags: 
-   - "test-server_preparations"
+    - "test-server_preparations"
 
 - include: roles/xemoe.dotfiles/test/main.yml
   tags: 
-   - "test-dotfiles"
+    - "test-dotfiles"
 
 - include: roles/xemoe.webpack/test/main.yml
   tags: 
-   - "test-webpack"
+    - "test-webpack"
 
 - include: roles/xemoe.ssh_config/test/main.yml
   tags: 
-   - "test-ssh_config"
+    - "test-ssh_config"
 
 - include: roles/xemoe.mount_sshfs/test/main.yml
   tags: 
     - "test-mount_sshfs"
+
+- include: roles/xemoe.mount_nfs/test/setup_nfs_server.yml
+  tags: 
+    - "test-mount_nfs"
+
+- include: roles/xemoe.mount_nfs/test/main.yml
+  tags: 
+    - "test-mount_nfs"
 
 - include: roles/xemoe.logstash_configurations/test/test-syslog.yml
   tags: 

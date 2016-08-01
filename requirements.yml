@@ -17,3 +17,8 @@
 - src: angstwad.docker_ubuntu
   path: ./roles
 
+- src: debops.core
+  path: ./roles
+
+- src: debops.nfs
+  path: ./roles

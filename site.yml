@@ -36,10 +36,15 @@
   tags: 
     - "test-mount_nfs"
 
-- include: roles/xemoe.logstash_configurations/test/test-syslog.yml
+- include: roles/xemoe.logstash_configurations/test/test-syslog_alerts.yml
   tags: 
     - "test-logstash_configurations"
-    - "test-logstash_configurations-syslog"
+    - "test-logstash_configurations-syslog_alerts"
+
+- include: roles/xemoe.logstash_configurations/test/test-snort_alerts.yml
+  tags: 
+    - "test-logstash_configurations"
+    - "test-logstash_configurations-snort_alerts"
 
 - include: roles/xemoe.logstash_configurations/test/test-files_forward.yml
   tags: 

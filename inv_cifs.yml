@@ -1,0 +1,4 @@
+---
+- include: roles/xemoe.mount_cifs/test/main.yml
+  tags: 
+    - "test-mount_cifs"
